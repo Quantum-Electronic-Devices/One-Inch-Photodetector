@@ -3,6 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
+	(descr "Copyright Quantum Electronic Devices GmbH")
 	(property "Reference" "REF**"
 		(at 0 -3.4 0)
 		(unlocked yes)

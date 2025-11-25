@@ -430,7 +430,7 @@
 				)
 			)
 		)
-		(property "Description" "Quantum Electronic Devices"
+		(property "Description" "Copyright Quantum Electronic Devices"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")

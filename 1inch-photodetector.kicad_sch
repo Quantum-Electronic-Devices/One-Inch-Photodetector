@@ -708,7 +708,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Quantum Electronic Devices"
+			(property "Description" "Copyright Quantum Electronic Devices"
 				(at 6.604 -1.524 0)
 				(effects
 					(font
@@ -5517,7 +5517,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Quantum Electronic Devices"
+		(property "Description" "Copyright Quantum Electronic Devices"
 			(at 268.224 172.974 0)
 			(effects
 				(font

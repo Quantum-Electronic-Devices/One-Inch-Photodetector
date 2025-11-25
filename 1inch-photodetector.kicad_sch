@@ -672,7 +672,7 @@
 			(exclude_from_sim no)
 			(in_bom no)
 			(on_board yes)
-			(property "Reference" "#SYM"
+			(property "Reference" "SYM1"
 				(at 0 0 0)
 				(effects
 					(font
@@ -690,7 +690,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "custom_footprints_project:QED-logo_small"
 				(at -6.35 0 0)
 				(effects
 					(font
@@ -717,7 +717,34 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Enable" "0"
+			(property "MFN" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "PN" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "RoHS" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Temperature" ""
 				(at 0 0 0)
 				(effects
 					(font

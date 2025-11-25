@@ -1245,7 +1245,7 @@
 		(descr "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7Fconsmp001-smd-g-t-ds%7FA%7Fpdf%7FEnglish%7FENG_DS_consmp001-smd-g-t-ds_A.pdf%7FCONSMP001-SMD-G-T")
 		(tags "SMP SMD Female Jack Vertical")
 		(property "Reference" "J2"
-			(at 1.5 5 0)
+			(at 1.5 4.2 0)
 			(layer "B.SilkS")
 			(uuid "8da251db-ea51-43c4-9a23-3e34bfd269ed")
 			(effects

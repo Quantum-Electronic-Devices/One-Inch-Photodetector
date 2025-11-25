@@ -6883,14 +6883,15 @@
 		(layer "Edge.Cuts")
 		(uuid "becc358e-ef6d-41ed-a412-61ca01ad5ed6")
 	)
-	(gr_text "1″ Photodetector\nDesign: P. Baus\nDate: 2025-11\nVersion: 1.0.0"
-		(at 145.6 92.5 0)
+	(gr_text "1″ Photodetector\nDesign: P. Baus\nDate: 2025-11\nVersion: 1.0.0\nhttps://qed.gmbh"
+		(at 144.86 93.57 0)
 		(layer "F.SilkS")
 		(uuid "9f6748e8-8f0d-48e2-827e-24181f021855")
 		(effects
 			(font
-				(size 0.7 0.7)
-				(thickness 0.1)
+				(size 0.8 0.8)
+				(thickness 0.16)
+				(bold yes)
 			)
 			(justify left)
 		)

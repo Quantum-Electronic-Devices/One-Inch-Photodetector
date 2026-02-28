@@ -11,6 +11,8 @@
 		(company "Quantum Electronic Devices GmbH ")
 		(comment 1 "Copyright (©) 2025, Patrick Baus <patrick.baus@quantum-electronic-devices.de>")
 		(comment 2 "Licensed under CERN OHL-W v2.0")
+		(comment 3 "All resistor tolerances are 1% unless specified.")
+		(comment 4 "All capacitors are X7R/X8L ceramic unless specified.")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:ADA4898-2"
@@ -1363,6 +1365,156 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:Jumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at 0 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Jumper_2_Open"
+				(at 0 -2.286 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Jumper, 2-pole, open"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Jumper SPST"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Jumper_2_Open_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_0_1"
+				(arc
+					(start -1.524 1.27)
+					(mid 0 1.778)
+					(end 1.524 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:LT3032-12"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2136,6 +2288,143 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:Earth"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "Earth"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"Earth\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global ground gnd"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Earth_0_1"
+				(polyline
+					(pts
+						(xy -0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.127 -2.54) (xy 0.127 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Earth_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -2339,6 +2628,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TODO: Replace with HRG3216P-49R9-D-T1"
+		(exclude_from_sim no)
+		(at 164.846 48.768 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c1212f4d-cdbe-4003-bd10-33ffcbaacfa2")
+	)
 	(junction
 		(at 41.91 158.75)
 		(diameter 0)
@@ -2346,22 +2645,28 @@
 		(uuid "031a4602-52aa-472e-b877-e6765ee231f5")
 	)
 	(junction
-		(at 53.34 130.81)
+		(at 53.34 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2736a2cb-f7e0-4a60-80e9-2af772091792")
 	)
 	(junction
-		(at 111.76 130.81)
+		(at 111.76 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "372ce7d9-dc78-4a30-a5b4-185ed78bf015")
 	)
 	(junction
-		(at 41.91 130.81)
+		(at 41.91 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "46aa250c-e121-483c-9fe8-4eaf44abec87")
+	)
+	(junction
+		(at 201.93 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47b7ccf5-f1ac-4768-bebb-debf69f24c8f")
 	)
 	(junction
 		(at 76.2 72.39)
@@ -2400,6 +2705,12 @@
 		(uuid "8f98eb54-0ba4-42a6-a80a-f7d4d662bc9f")
 	)
 	(junction
+		(at 232.41 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e0edb25-ead0-4a5f-a698-76208e72ffad")
+	)
+	(junction
 		(at 53.34 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2430,6 +2741,12 @@
 		(uuid "c28fd638-aead-490f-91e8-8dda0419cc86")
 	)
 	(junction
+		(at 208.28 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c69380db-b8e6-4f6d-80ec-aa53bb745ac2")
+	)
+	(junction
 		(at 124.46 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2442,7 +2759,7 @@
 		(uuid "d9ddd5d1-f0b1-4098-8e2c-7c7f220cac00")
 	)
 	(junction
-		(at 100.33 130.81)
+		(at 100.33 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dc9b81a4-ec39-47c3-8ba0-66da5325342f")
@@ -2466,7 +2783,7 @@
 		(uuid "f5cf8e7f-43b1-4b14-8fd7-7550636456ea")
 	)
 	(junction
-		(at 64.77 130.81)
+		(at 64.77 132.08)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd600532-92ce-41f8-9b8a-d2e9097ecc32")
@@ -2497,7 +2814,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 139.7) (xy 53.34 144.78)
+			(xy 53.34 140.97) (xy 53.34 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2547,13 +2864,33 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 130.81) (xy 53.34 132.08)
+			(xy 53.34 132.08) (xy 53.34 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0f6f0203-4d75-47b6-9409-8a898d78cbb3")
+	)
+	(wire
+		(pts
+			(xy 226.06 96.52) (xy 232.41 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10876fb6-babe-4b9d-9733-61ff9cd3994c")
+	)
+	(wire
+		(pts
+			(xy 208.28 96.52) (xy 208.28 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10d37e82-a84b-49fd-bdcd-859af33c83bf")
 	)
 	(wire
 		(pts
@@ -2567,7 +2904,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 135.89) (xy 93.98 135.89)
+			(xy 90.17 137.16) (xy 93.98 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2637,7 +2974,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 140.97) (xy 80.01 144.78)
+			(xy 80.01 142.24) (xy 80.01 144.78)
 		)
 		(stroke
 			(width 0)
@@ -2677,7 +3014,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 135.89) (xy 93.98 140.97)
+			(xy 93.98 137.16) (xy 93.98 142.24)
 		)
 		(stroke
 			(width 0)
@@ -2717,6 +3054,26 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 106.68) (xy 232.41 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "495edb12-b1e8-412c-a95d-413d23252561")
+	)
+	(wire
+		(pts
+			(xy 208.28 96.52) (xy 215.9 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b57b9ef-4305-44ac-98cc-7442a65a9760")
+	)
+	(wire
+		(pts
 			(xy 53.34 144.78) (xy 80.01 144.78)
 		)
 		(stroke
@@ -2747,7 +3104,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 130.81) (xy 69.85 130.81)
+			(xy 64.77 132.08) (xy 69.85 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2767,7 +3124,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 135.89) (xy 64.77 135.89)
+			(xy 69.85 137.16) (xy 64.77 137.16)
 		)
 		(stroke
 			(width 0)
@@ -2807,6 +3164,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 101.6) (xy 201.93 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bb67c4f-48c1-45c5-8219-37f4f42a09f9")
+	)
+	(wire
+		(pts
 			(xy 91.44 82.55) (xy 100.33 82.55)
 		)
 		(stroke
@@ -2817,7 +3184,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 130.81) (xy 111.76 132.08)
+			(xy 111.76 132.08) (xy 111.76 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2877,6 +3244,16 @@
 	)
 	(wire
 		(pts
+			(xy 237.49 101.6) (xy 237.49 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75fda863-8231-442f-8e36-fc731b188cdd")
+	)
+	(wire
+		(pts
 			(xy 29.21 83.82) (xy 29.21 85.09)
 		)
 		(stroke
@@ -2887,7 +3264,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 130.81) (xy 64.77 130.81)
+			(xy 53.34 132.08) (xy 64.77 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2937,7 +3314,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 140.97) (xy 100.33 139.7)
+			(xy 100.33 142.24) (xy 100.33 140.97)
 		)
 		(stroke
 			(width 0)
@@ -2967,7 +3344,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 130.81) (xy 53.34 130.81)
+			(xy 41.91 132.08) (xy 53.34 132.08)
 		)
 		(stroke
 			(width 0)
@@ -2987,6 +3364,16 @@
 	)
 	(wire
 		(pts
+			(xy 232.41 96.52) (xy 232.41 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90c4f786-1615-43af-856e-f2a65c910e8c")
+	)
+	(wire
+		(pts
 			(xy 69.85 153.67) (xy 67.31 153.67)
 		)
 		(stroke
@@ -2997,7 +3384,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 135.89) (xy 64.77 130.81)
+			(xy 64.77 137.16) (xy 64.77 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3027,7 +3414,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 140.97) (xy 100.33 140.97)
+			(xy 93.98 142.24) (xy 100.33 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3087,7 +3474,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 139.7) (xy 111.76 144.78)
+			(xy 111.76 140.97) (xy 111.76 144.78)
 		)
 		(stroke
 			(width 0)
@@ -3107,7 +3494,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 130.81) (xy 100.33 130.81)
+			(xy 90.17 132.08) (xy 100.33 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3137,6 +3524,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 106.68) (xy 208.28 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7d178bd-0d87-4546-b587-fc67235748e2")
+	)
+	(wire
+		(pts
 			(xy 34.29 144.78) (xy 53.34 144.78)
 		)
 		(stroke
@@ -3144,6 +3541,16 @@
 			(type default)
 		)
 		(uuid "a831d039-fe25-4a2f-bdd0-6c28906e8d83")
+	)
+	(wire
+		(pts
+			(xy 201.93 101.6) (xy 201.93 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a94522c3-e54a-4c54-ada6-2cdd4e8416cb")
 	)
 	(wire
 		(pts
@@ -3157,7 +3564,17 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 129.54) (xy 41.91 130.81)
+			(xy 232.41 106.68) (xy 232.41 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ada3a998-02bf-4903-adb6-087a975d585f")
+	)
+	(wire
+		(pts
+			(xy 41.91 130.81) (xy 41.91 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3167,13 +3584,23 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 132.08) (xy 100.33 130.81)
+			(xy 100.33 133.35) (xy 100.33 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b1a4dc56-eaea-4612-bdbc-c1d7715bb269")
+	)
+	(wire
+		(pts
+			(xy 215.9 106.68) (xy 208.28 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b514ad00-6927-4dd4-b261-89bf43754827")
 	)
 	(wire
 		(pts
@@ -3184,6 +3611,26 @@
 			(type default)
 		)
 		(uuid "c12010be-fb70-44c1-82ce-05512da08ca9")
+	)
+	(wire
+		(pts
+			(xy 232.41 101.6) (xy 237.49 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c175809d-c8e0-47b8-97b2-ce3d8c2e57d9")
+	)
+	(wire
+		(pts
+			(xy 201.93 97.79) (xy 201.93 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5feacc6-cf57-4430-8277-0a50c67de05f")
 	)
 	(wire
 		(pts
@@ -3247,7 +3694,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 130.81) (xy 111.76 130.81)
+			(xy 100.33 132.08) (xy 111.76 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3307,7 +3754,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 130.81) (xy 41.91 142.24)
+			(xy 41.91 132.08) (xy 41.91 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3327,7 +3774,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 130.81) (xy 124.46 130.81)
+			(xy 111.76 132.08) (xy 124.46 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3347,7 +3794,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 124.46) (xy 124.46 130.81)
+			(xy 124.46 125.73) (xy 124.46 132.08)
 		)
 		(stroke
 			(width 0)
@@ -3374,6 +3821,26 @@
 			(type default)
 		)
 		(uuid "fda9810b-8e98-49ef-9b07-155a86326ae9")
+	)
+	(label "V+"
+		(at 46.99 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51e9a99d-e433-471d-975c-2a1b8db44200")
+	)
+	(label "V-"
+		(at 45.72 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c3034972-b448-46df-a257-85fbf50c3ef4")
 	)
 	(symbol
 		(lib_id "Connector_Generic_MountingPin:Conn_01x03_MountingPin")
@@ -3428,7 +3895,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Molex"
 			(at 29.21 144.78 0)
 			(effects
 				(font
@@ -3437,7 +3904,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "53398-0371"
 			(at 29.21 144.78 0)
 			(effects
 				(font
@@ -3446,7 +3913,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 29.21 144.78 0)
 			(effects
 				(font
@@ -3455,7 +3922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –40 °C to 105 °C; Tstorage = –5 °C to 35 °C"
 			(at 29.21 144.78 0)
 			(effects
 				(font
@@ -3539,7 +4006,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "TE Connectivity"
 			(at 173.99 59.69 0)
 			(effects
 				(font
@@ -3548,7 +4015,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "CONSMP001-SMD-G-T"
 			(at 173.99 59.69 0)
 			(effects
 				(font
@@ -3557,7 +4024,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 173.99 59.69 0)
 			(effects
 				(font
@@ -3566,7 +4033,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Tstorage = –65 °C to 155 °C"
 			(at 173.99 59.69 0)
 			(effects
 				(font
@@ -3845,7 +4312,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Susumu"
 			(at 124.46 80.01 0)
 			(effects
 				(font
@@ -3854,7 +4321,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RG1608P-301-B-T5"
 			(at 124.46 80.01 0)
 			(effects
 				(font
@@ -3863,7 +4330,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 124.46 80.01 0)
 			(effects
 				(font
@@ -3872,7 +4339,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 155 °C"
 			(at 124.46 80.01 0)
 			(effects
 				(font
@@ -3898,7 +4365,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 41.91 129.54 0)
+		(at 41.91 130.81 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3907,7 +4374,7 @@
 		(fields_autoplaced yes)
 		(uuid "0fb337e2-4f5a-4718-a866-4b2d3ebc1374")
 		(property "Reference" "#FLG02"
-			(at 41.91 127.635 0)
+			(at 41.91 128.905 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3916,7 +4383,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 41.91 124.46 0)
+			(at 41.91 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3924,7 +4391,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 129.54 0)
+			(at 41.91 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3933,7 +4400,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 41.91 129.54 0)
+			(at 41.91 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3942,7 +4409,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 41.91 129.54 0)
+			(at 41.91 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3988,7 +4455,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 153.67 61.468 90)
 			(effects
 				(font
@@ -4006,7 +4473,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "Susumu"
 			(at 153.67 59.69 0)
 			(effects
 				(font
@@ -4015,7 +4482,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Yageo"
 			(at 153.67 59.69 0)
 			(effects
 				(font
@@ -4024,7 +4491,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "HRG3216P-49R9-D-T1"
 			(at 153.67 59.69 0)
 			(effects
 				(font
@@ -4033,7 +4500,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 153.67 59.69 0)
 			(effects
 				(font
@@ -4042,7 +4509,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 155 °C"
 			(at 153.67 59.69 0)
 			(effects
 				(font
@@ -4067,6 +4534,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 220.98 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "256a7bc2-5a4e-48b0-a60f-32d3d8b34521")
+		(property "Reference" "JP1"
+			(at 220.98 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 220.98 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFN" ""
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" ""
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" ""
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature" ""
+			(at 220.98 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "db6c54e7-1f50-44ad-b3f8-2e022fa8be05")
+		)
+		(pin "1"
+			(uuid "25b0073f-22f5-41cc-833d-a94dda9253e3")
+		)
+		(instances
+			(project ""
+				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 111.76 153.67 0)
 		(unit 1)
@@ -4085,7 +4656,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "10u"
 			(at 115.57 154.9399 0)
 			(effects
 				(font
@@ -4121,7 +4692,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "TDK"
 			(at 111.76 153.67 0)
 			(effects
 				(font
@@ -4130,7 +4701,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "CGA4J1X7S1E106K125AC"
 			(at 111.76 153.67 0)
 			(effects
 				(font
@@ -4139,7 +4710,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 111.76 153.67 0)
 			(effects
 				(font
@@ -4148,7 +4719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 125 °C"
 			(at 111.76 153.67 0)
 			(effects
 				(font
@@ -4232,6 +4803,72 @@
 			(project "oip_opa818"
 				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 201.93 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4265b0cf-353b-4484-91f9-24ff0c41e3e8")
+		(property "Reference" "#FLG04"
+			(at 201.93 95.885 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 201.93 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 201.93 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "157cad22-3809-4d75-be53-ece38485e7d3")
+		)
+		(instances
+			(project ""
+				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -4406,35 +5043,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 100.33 135.89 0)
+		(lib_id "power:Earth")
+		(at 201.93 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5cb02d23-f71a-47f3-8927-d8d89aedf065")
-		(property "Reference" "C3"
-			(at 104.14 134.6199 0)
+		(uuid "54cae226-5998-4ed0-9445-53ba2a1419c4")
+		(property "Reference" "#PWR010"
+			(at 201.93 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "C"
-			(at 104.14 137.1599 0)
+		(property "Value" "Earth"
+			(at 201.93 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 101.2952 139.7 0)
+		(property "Footprint" ""
+			(at 201.93 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4443,7 +5079,74 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 100.33 135.89 0)
+			(at 201.93 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"Earth\""
+			(at 201.93 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "126da64f-9501-4d8a-b978-218b0bbc5862")
+		)
+		(instances
+			(project ""
+				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 100.33 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cb02d23-f71a-47f3-8927-d8d89aedf065")
+		(property "Reference" "C3"
+			(at 104.14 135.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100p"
+			(at 104.14 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 101.2952 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4452,7 +5155,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 100.33 135.89 0)
+			(at 100.33 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4460,8 +5163,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
-			(at 100.33 135.89 0)
+		(property "MFN" "Murata Electronics"
+			(at 100.33 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4469,8 +5172,8 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
-			(at 100.33 135.89 0)
+		(property "PN" "GCM1885C2A101JA16D"
+			(at 100.33 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4478,8 +5181,8 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
-			(at 100.33 135.89 0)
+		(property "RoHS" "Yes"
+			(at 100.33 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4487,8 +5190,8 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
-			(at 100.33 135.89 0)
+		(property "Temperature" "Top = –55 °C to 125 °C"
+			(at 100.33 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4632,6 +5335,42 @@
 				(hide yes)
 			)
 		)
+		(property "MFN" "ams Osram"
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" "SFH 203 FA"
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" "Yes"
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature" "Top = –40 °C to 100 °C; Tstorage = –40 °C to 100 °C"
+			(at 60.96 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "840475b9-84ab-4c69-8439-426e9ec10c03")
 		)
@@ -4700,7 +5439,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Analog Devices"
 			(at 134.62 59.69 0)
 			(effects
 				(font
@@ -4709,7 +5448,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "ADA4898-2YRDZ"
 			(at 134.62 59.69 0)
 			(effects
 				(font
@@ -4718,7 +5457,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 134.62 59.69 0)
 			(effects
 				(font
@@ -4727,7 +5466,16 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –40 °C to 105 °C; Tstorage = –65 °C to 150 °C"
+			(at 134.62 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Alternative" "Analog Devices ADA4898-2YRDZ-R7"
 			(at 134.62 59.69 0)
 			(effects
 				(font
@@ -4827,7 +5575,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Analog Devices"
 			(at 31.75 76.2 0)
 			(effects
 				(font
@@ -4836,7 +5584,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "ADA4898-2YRDZ"
 			(at 31.75 76.2 0)
 			(effects
 				(font
@@ -4845,7 +5593,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 31.75 76.2 0)
 			(effects
 				(font
@@ -4854,7 +5602,16 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –40 °C to 105 °C; Tstorage = –65 °C to 150 °C"
+			(at 31.75 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Alternative" "Analog Devices ADA4898-2YRDZ-R7"
 			(at 31.75 76.2 0)
 			(effects
 				(font
@@ -4952,7 +5709,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Susumu"
 			(at 87.63 72.39 0)
 			(effects
 				(font
@@ -4961,7 +5718,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RG1608P-103-D-T5"
 			(at 87.63 72.39 0)
 			(effects
 				(font
@@ -4970,7 +5727,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 87.63 72.39 0)
 			(effects
 				(font
@@ -4979,7 +5736,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 155 °C"
 			(at 87.63 72.39 0)
 			(effects
 				(font
@@ -5154,7 +5911,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "100p"
 			(at 104.14 154.9399 0)
 			(effects
 				(font
@@ -5190,7 +5947,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Murata Electronics"
 			(at 100.33 153.67 0)
 			(effects
 				(font
@@ -5199,7 +5956,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "GCM1885C2A101JA16D"
 			(at 100.33 153.67 0)
 			(effects
 				(font
@@ -5208,7 +5965,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 100.33 153.67 0)
 			(effects
 				(font
@@ -5217,7 +5974,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 125 °C"
 			(at 100.33 153.67 0)
 			(effects
 				(font
@@ -5293,7 +6050,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Analog Devices"
 			(at 88.9 57.15 0)
 			(effects
 				(font
@@ -5302,7 +6059,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "ADA4898-2YRDZ"
 			(at 88.9 57.15 0)
 			(effects
 				(font
@@ -5311,7 +6068,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 88.9 57.15 0)
 			(effects
 				(font
@@ -5320,7 +6077,16 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –40 °C to 105 °C; Tstorage = –65 °C to 150 °C"
+			(at 88.9 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Alternative" "Analog Devices ADA4898-2YRDZ-R7"
 			(at 88.9 57.15 0)
 			(effects
 				(font
@@ -5420,7 +6186,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Susumu"
 			(at 60.96 90.17 0)
 			(effects
 				(font
@@ -5429,7 +6195,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RG1608Q-200-D-T5"
 			(at 60.96 90.17 0)
 			(effects
 				(font
@@ -5438,7 +6204,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 60.96 90.17 0)
 			(effects
 				(font
@@ -5447,7 +6213,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 155 °C"
 			(at 60.96 90.17 0)
 			(effects
 				(font
@@ -5579,7 +6345,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9f58457b-e534-4632-85b5-1e0591e7c831")
 		(property "Reference" "#FLG01"
 			(at 124.46 140.335 0)
@@ -5591,7 +6356,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 124.46 137.16 0)
+			(at 124.46 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5638,6 +6403,110 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 220.98 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a863c132-ec5d-465d-8baf-c4a275f30892")
+		(property "Reference" "JP2"
+			(at 220.98 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 220.98 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFN" ""
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" ""
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" ""
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature" ""
+			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a0c59129-7982-43ac-8566-5b400bb71db6")
+		)
+		(pin "1"
+			(uuid "ee2ede3b-74d7-4acc-b68c-e02e13fa2d39")
+		)
+		(instances
+			(project "1inch-photodetector"
+				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Regulator_Linear:LT3032-12")
 		(at 80.01 156.21 0)
 		(mirror x)
@@ -5655,7 +6524,7 @@
 				)
 			)
 		)
-		(property "Value" "LT3032-12"
+		(property "Value" "LT3032IDE-12"
 			(at 80.01 163.83 0)
 			(effects
 				(font
@@ -5682,6 +6551,51 @@
 			)
 		)
 		(property "Description" "150mA, Dual Low Dropout Linear Regulator, Positive/Negative Low Noise, 12V Output, DFN-14"
+			(at 80.01 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFN" "Analog Devices"
+			(at 80.01 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" "LT3032IDE-12#PBF"
+			(at 80.01 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" "Yes"
+			(at 80.01 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature" "Top = –40 °C to 125 °C"
+			(at 80.01 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Alternative" "Analog Devices LT3032EDE-12#PBF"
 			(at 80.01 156.21 0)
 			(effects
 				(font
@@ -5743,7 +6657,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 124.46 124.46 0)
+		(at 124.46 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5752,7 +6666,7 @@
 		(fields_autoplaced yes)
 		(uuid "b926f8fb-7b47-44df-a70f-c228b8982639")
 		(property "Reference" "#PWR02"
-			(at 124.46 128.27 0)
+			(at 124.46 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5761,7 +6675,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 124.46 119.38 0)
+			(at 124.46 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5769,7 +6683,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 124.46 0)
+			(at 124.46 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5778,7 +6692,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 124.46 0)
+			(at 124.46 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5787,7 +6701,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 124.46 124.46 0)
+			(at 124.46 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5802,6 +6716,107 @@
 			(project ""
 				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 237.49 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bae71d7c-82a5-4466-9363-09bc779005cb")
+		(property "Reference" "#PWR011"
+			(at 237.49 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 237.617 107.2642 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFN" ""
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" ""
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" ""
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature" ""
+			(at 237.49 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b55ece86-69c9-413d-b757-a5830b959128")
+		)
+		(instances
+			(project "1inch-photodetector"
+				(path "/bc1f768a-38ac-49f6-bd7e-5ad2d645b686"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -5891,7 +6906,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "10u"
 			(at 57.15 153.6699 0)
 			(effects
 				(font
@@ -5927,7 +6942,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "TDK"
 			(at 53.34 152.4 0)
 			(effects
 				(font
@@ -5936,7 +6951,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "CGA4J1X7S1E106K125AC"
 			(at 53.34 152.4 0)
 			(effects
 				(font
@@ -5945,7 +6960,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 53.34 152.4 0)
 			(effects
 				(font
@@ -5954,7 +6969,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 125 °C"
 			(at 53.34 152.4 0)
 			(effects
 				(font
@@ -6045,7 +7060,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LT3032-12")
-		(at 80.01 133.35 0)
+		(at 80.01 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6054,15 +7069,15 @@
 		(fields_autoplaced yes)
 		(uuid "c2f36e92-b8ff-491e-b572-c067fa44fcff")
 		(property "Reference" "U2"
-			(at 80.01 123.19 0)
+			(at 80.01 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "LT3032-12"
-			(at 80.01 125.73 0)
+		(property "Value" "LT3032IDE-12"
+			(at 80.01 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6070,7 +7085,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:Linear_DE14MA"
-			(at 80.01 125.095 0)
+			(at 80.01 126.365 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6079,7 +7094,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/3032ff.pdf"
-			(at 80.01 133.35 0)
+			(at 80.01 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6088,7 +7103,52 @@
 			)
 		)
 		(property "Description" "150mA, Dual Low Dropout Linear Regulator, Positive/Negative Low Noise, 12V Output, DFN-14"
-			(at 80.01 133.35 0)
+			(at 80.01 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MFN" "Analog Devices"
+			(at 80.01 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PN" "LT3032IDE-12#PBF"
+			(at 80.01 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RoHS" "Yes"
+			(at 80.01 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature" "Top = –40 °C to 125 °C"
+			(at 80.01 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Alternative" "Analog Devices LT3032EDE-12#PBF"
+			(at 80.01 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6200,7 +7260,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Susumu"
 			(at 134.62 74.93 0)
 			(effects
 				(font
@@ -6209,7 +7269,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "RG1608P-122-D-T5"
 			(at 134.62 74.93 0)
 			(effects
 				(font
@@ -6218,7 +7278,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 134.62 74.93 0)
 			(effects
 				(font
@@ -6227,7 +7287,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 155 °C"
 			(at 134.62 74.93 0)
 			(effects
 				(font
@@ -6333,7 +7393,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" "-55,125"
+		(property "Temperature" "Top = –55 °C to 125 °C"
 			(at 60.96 81.28 0)
 			(effects
 				(font
@@ -6425,7 +7485,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 111.76 135.89 0)
+		(at 111.76 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6434,7 +7494,7 @@
 		(fields_autoplaced yes)
 		(uuid "ebc3ac27-d8b3-4fe8-bd62-ee776e819977")
 		(property "Reference" "C5"
-			(at 115.57 134.6199 0)
+			(at 115.57 135.8899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6442,8 +7502,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 115.57 137.1599 0)
+		(property "Value" "10u"
+			(at 115.57 138.4299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6452,7 +7512,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 112.7252 139.7 0)
+			(at 112.7252 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6461,7 +7521,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 111.76 135.89 0)
+			(at 111.76 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6470,7 +7530,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 111.76 135.89 0)
+			(at 111.76 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6478,8 +7538,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
-			(at 111.76 135.89 0)
+		(property "MFN" "TDK"
+			(at 111.76 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6487,8 +7547,8 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
-			(at 111.76 135.89 0)
+		(property "PN" "CGA4J1X7S1E106K125AC"
+			(at 111.76 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6496,8 +7556,8 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
-			(at 111.76 135.89 0)
+		(property "RoHS" "Yes"
+			(at 111.76 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6505,8 +7565,8 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
-			(at 111.76 135.89 0)
+		(property "Temperature" "Top = –55 °C to 125 °C"
+			(at 111.76 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6582,7 +7642,7 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
+		(property "MFN" "Yageo"
 			(at 87.63 82.55 0)
 			(effects
 				(font
@@ -6591,7 +7651,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
+		(property "PN" "AC0603BRNPO9BN2R0"
 			(at 87.63 82.55 0)
 			(effects
 				(font
@@ -6600,7 +7660,7 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
+		(property "RoHS" "Yes"
 			(at 87.63 82.55 0)
 			(effects
 				(font
@@ -6609,7 +7669,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
+		(property "Temperature" "Top = –55 °C to 125 °C"
 			(at 87.63 82.55 0)
 			(effects
 				(font
@@ -6635,7 +7695,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 53.34 135.89 0)
+		(at 53.34 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6644,7 +7704,7 @@
 		(fields_autoplaced yes)
 		(uuid "f67c9b3c-1a6b-4124-889f-850e0785c3e8")
 		(property "Reference" "C6"
-			(at 57.15 134.6199 0)
+			(at 57.15 135.8899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6652,8 +7712,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 57.15 137.1599 0)
+		(property "Value" "10u"
+			(at 57.15 138.4299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6662,7 +7722,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 54.3052 139.7 0)
+			(at 54.3052 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6671,7 +7731,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 53.34 135.89 0)
+			(at 53.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6680,7 +7740,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 53.34 135.89 0)
+			(at 53.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6688,8 +7748,8 @@
 				(hide yes)
 			)
 		)
-		(property "MFN" ""
-			(at 53.34 135.89 0)
+		(property "MFN" "TDK"
+			(at 53.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6697,8 +7757,8 @@
 				(hide yes)
 			)
 		)
-		(property "PN" ""
-			(at 53.34 135.89 0)
+		(property "PN" "CGA4J1X7S1E106K125AC"
+			(at 53.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6706,8 +7766,8 @@
 				(hide yes)
 			)
 		)
-		(property "RoHS" ""
-			(at 53.34 135.89 0)
+		(property "RoHS" "Yes"
+			(at 53.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6715,8 +7775,8 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" ""
-			(at 53.34 135.89 0)
+		(property "Temperature" "Top = –55 °C to 125 °C"
+			(at 53.34 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6821,7 +7881,7 @@
 				(hide yes)
 			)
 		)
-		(property "Temperature" "-55,125"
+		(property "Temperature" "Top = –55 °C to 125 °C"
 			(at 48.26 80.01 0)
 			(effects
 				(font

@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "1\" Photodiode Transimpedance Amplifier")
-		(date "2025-11-24")
-		(rev "1.0.0")
+		(date "2026-02-28")
+		(rev "1.1.0")
 		(company "Quantum Electronic Devices GmbH")
 		(comment 1 "Copyright (©) 2025, Patrick Baus <patrick.baus@quantum-electronic-devices.de>")
 		(comment 2 "Licensed under CERN OHL-W v2.0")

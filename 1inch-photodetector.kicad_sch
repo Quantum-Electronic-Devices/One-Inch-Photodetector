@@ -3904,7 +3904,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" " 53398-0371"
+		(property "PN" "53398-0371"
 			(at 29.21 144.78 0)
 			(effects
 				(font
@@ -6568,7 +6568,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "LT3032IDE-12#PBF "
+		(property "PN" "LT3032IDE-12#PBF"
 			(at 80.01 156.21 0)
 			(effects
 				(font
@@ -6595,7 +6595,7 @@
 				(hide yes)
 			)
 		)
-		(property "Alternative" "Analog Devices LT3032EDE-12#PBF "
+		(property "Alternative" "Analog Devices LT3032EDE-12#PBF"
 			(at 80.01 156.21 0)
 			(effects
 				(font
@@ -7120,7 +7120,7 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "LT3032IDE-12#PBF "
+		(property "PN" "LT3032IDE-12#PBF"
 			(at 80.01 134.62 0)
 			(effects
 				(font
@@ -7147,7 +7147,7 @@
 				(hide yes)
 			)
 		)
-		(property "Alternative" "Analog Devices LT3032EDE-12#PBF "
+		(property "Alternative" "Analog Devices LT3032EDE-12#PBF"
 			(at 80.01 134.62 0)
 			(effects
 				(font

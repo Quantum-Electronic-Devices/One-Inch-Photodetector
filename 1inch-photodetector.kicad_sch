@@ -11,6 +11,8 @@
 		(company "Quantum Electronic Devices GmbH ")
 		(comment 1 "Copyright (©) 2025, Patrick Baus <patrick.baus@quantum-electronic-devices.de>")
 		(comment 2 "Licensed under CERN OHL-W v2.0")
+		(comment 3 "All resistor tolerances are 1% unless specified.")
+		(comment 4 "All capacitors are X7R/X8L ceramic unless specified.")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:ADA4898-2"

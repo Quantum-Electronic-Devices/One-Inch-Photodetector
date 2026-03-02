@@ -26,7 +26,7 @@ jobs:
       matrix:
         project:
           - name: 1-inch-Photodetector
-            schematic: 1inch-photodetector.kicad.kicad_sch
+            schematic: 1inch-photodetector.kicad_sch
             pcb: 1inch-photodetector.kicad_pcb
             config: config.kibot.yaml
             variants: "[ 'default', ]"

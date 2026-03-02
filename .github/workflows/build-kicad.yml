@@ -80,9 +80,9 @@ jobs:
         shell: bash
 
       - name: Test for correct git tag
-        if: github.ref_type == 'tag' && github.ref_name !=  steps.extract_sch_revision.outputs.value
+        if: github.event.action == 'published' && github.event.release.tag_name !=  steps.extract_pcb_revision.outputs.value
         run: |
-          echo "::error::Revision number of the schematic/PCB (${{ steps.extract_sch_revision.outputs.value }}) does not match the Github tag (${{ github.ref_name }})."
+          echo "::error::Revision number of the schematic/PCB (${{ steps.extract_pcb_revision.outputs.value }}) does not match the Github tag (${{ github.event.release.tag_name }})."
           exit 1
         shell: bash
 

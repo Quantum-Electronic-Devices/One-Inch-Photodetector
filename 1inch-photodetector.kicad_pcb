@@ -6842,7 +6842,7 @@
 		(layer "Edge.Cuts")
 		(uuid "becc358e-ef6d-41ed-a412-61ca01ad5ed6")
 	)
-	(gr_text "1″ Photodetector\nDesign: P. Baus\nDate: 2026-02\nVersion: 1.1.0\nhttps://qed.gmbh"
+	(gr_text "1″ Photodetector\nDesign: P. Baus\nDate: 2026-03\nVersion: 1.1.1\nhttps://qed.gmbh"
 		(at 89.86 63.57 0)
 		(layer "F.SilkS")
 		(uuid "9f6748e8-8f0d-48e2-827e-24181f021855")

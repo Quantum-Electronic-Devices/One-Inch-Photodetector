@@ -14,12 +14,32 @@ on:
       - published
 
 jobs:
+  prepare-matrix:
+    runs-on: ubuntu-latest
+
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+    steps:
+      - name: Generate matrix
+        id: set-matrix
+        run: |
+          MATRIX_JSON=$(jq -cn '
+            {
+              tex_file: [
+                { project_name: "1-inch-Photodetector", name: "datasheet/datasheet", output: "datasheet/datasheet", description: "Device datasheet (pdf)" }
+              ]
+            }
+          ')
+
+          echo "matrix=${MATRIX_JSON}" >> "$GITHUB_OUTPUT"
+        shell: bash
+
   build:
     runs-on: ubuntu-latest
+    needs: prepare-matrix
     strategy:
-      matrix:
-        tex_file:
-          - { name: 'datasheet/datasheet', output: 'datasheet/datasheet', description: 'Device datasheet (pdf)' }
+      matrix: ${{ fromJson(needs.prepare-matrix.outputs.matrix) }}
 
     steps:
       - name: Checkout
@@ -32,23 +52,45 @@ jobs:
           tex-filename: ${{ matrix.tex_file.name }}
           output-filename: ${{ matrix.tex_file.output }}
 
+      - name: Upload PDF as artifact if not publishing
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ matrix.tex_file.output }}.pdf
+          archive: false
+          if-no-files-found: error
+          retention-days: 7
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [ prepare-matrix, build ]
+    permissions:
+      contents: write
+    if: github.event.action == 'published'
+    strategy:
+      matrix: ${{ fromJson(needs.prepare-matrix.outputs.matrix) }}
+
+    steps:
       - name: Parse base name from filename
         id: pdf-basename
         run: |
-          echo "value=$(basename ${{ steps.pdf-filename.outputs.value }})" >> $GITHUB_OUTPUT
+          echo "value=$(basename ${{ matrix.tex_file.output }}.pdf)" >> $GITHUB_OUTPUT
         shell: bash
 
-      - name: Upload PDF as artifact if not publishing
-        if: github.event.action != 'published'
-        uses: actions/upload-artifact@v7
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v8
         with:
-          name: PDF-${{ steps.pdf-basename.outputs.value }}
-          path: ${{ steps.pdf-filename.outputs.value }}.pdf
-          retention-days: 7
+          name: ${{ steps.pdf-basename.outputs.value }}
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ./
+        shell: bash
 
       - name: Append PDF as an asset
         if: github.event.action == 'published'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ github.ref_name }}" "${{ steps.pdf-filename.outputs.value }}.pdf"#"${{ matrix.tex_file.description }}" --repo "${{ github.repository }}"
+        run: |
+          mv "./${{ steps.pdf-basename.outputs.value }}" "${{ matrix.tex_file.project_name }}_${{ steps.pdf-basename.outputs.value }}"
+          gh release upload "${{ github.ref_name }}" "${{ matrix.tex_file.project_name }}_${{ steps.pdf-basename.outputs.value }}"#"${{ matrix.tex_file.description }}" --repo "${{ github.repository }}"
         shell: bash

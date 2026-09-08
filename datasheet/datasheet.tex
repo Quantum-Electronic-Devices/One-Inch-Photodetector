@@ -60,7 +60,7 @@
 \title{\qty{1}{in}-Photodetector}
 \author{Patrick Baus, QED}
 \date{\today}
-\newcommand{\versionNumber}{0.1.2}
+\newcommand{\versionNumber}{0.1.3}
 \revision{Revision \versionNumber}
 \newcommand{\repoUrl}{https://github.com/Quantum-Electronic-Devices/One-Inch-Photodiode}
 \companylogo{%
@@ -103,7 +103,7 @@ width=\paperwidth,minimum height=3cm] (box){};%
 \end{itemize}
 
 \section*{General Description}
-The \qty{1}{\inch}-Photodetector is a low-noise, free-space photodetector with an 8 MHz bandwidth and a rise time of 42 ns. Standard versions available are: VIS-NIR (\href{https://ams-osram.com/products/photodetectors/photodiodes/osram-radial-t1-34-sfh-203}{Osram SFH 203}) and NIR (\href{https://ams-osram.com/products/photodetectors/photodiodes/osram-radial-t1-34-sfh-203-fa}{Osram SFH 203 FA}), which blocks blocks ambient visible light up to \qty{750}{\nm}. These cover the spectral range from \qtyrange{400}{1100}{\nm} (SFH 203, \qty{10}{\percent} sensitivity) or \qtyrange{750}{1100}{\nm}  (SFH 203 FA, \qty{10}{\percent} sensitivity). The \qty{1}{\inch}-Photodetector demonstrates exceptional performance in applications such as optical power control loops and power monitoring, with a noise floor of \qty{<3}{\pA \per \Hz\tothe{0.5}} and a sensitivity of \qty{31}{\V \per \mW}.
+The \qty{1}{\inch}-Photodetector is a low-noise, free-space photodetector with an 8 MHz bandwidth and a rise time of 42 ns. Standard versions available are: VIS-NIR (\href{https://ams-osram.com/products/photodetectors/photodiodes/osram-radial-t1-34-sfh-203}{Osram SFH 203}) and NIR (\href{https://ams-osram.com/products/photodetectors/photodiodes/osram-radial-t1-34-sfh-203-fa}{Osram SFH 203 FA}), which blocks ambient visible light up to \qty{750}{\nm}. These cover the spectral range from \qtyrange{400}{1100}{\nm} (SFH 203, \qty{10}{\percent} sensitivity) or \qtyrange{750}{1100}{\nm}  (SFH 203 FA, \qty{10}{\percent} sensitivity). The \qty{1}{\inch}-Photodetector demonstrates exceptional performance in applications such as optical power control loops and power monitoring, with a noise floor of \qty{<3}{\pA \per \Hz\tothe{0.5}} and a sensitivity of \qty{31}{\V \per \mW}.
 
 It is designed to be easily mounted in a 30 mm cage system using a standard ⌀ \qty{1}{\inch} cage plate. With a sensitivity of \qty{31}{\V \per \mW}, it requires only micro watts to deliver a reliable and stable signal. In a typical application such as an optical power control loop, a \qty{45}{\degree} beamsampler within the cage system directs a small fraction of the laser beam onto the detector. This allows, for example, a beam coupled out of a fibre to be monitored for further experiments on the optical table. Integrating the photodetector into the cage system guarantees superior stability compared to solutions mounted on separate posts.
 
@@ -134,7 +134,9 @@ Using a small footprint SMP connector the photodetecor can also be mounted in sp
         \hline
         0.1.1 &2026-05-22 &Fixed QR-Code URL.\\
         \hline
-        \versionNumber &2026-05-26 &Updated datasheet style to KOMA fixing page numbering.\\
+        0.1.2 &2026-05-26 &Updated datasheet style to KOMA fixing page numbering.\\
+        \hline
+        \versionNumber &2026-09-08 &Fixed typo.\\
         \thickhline
     \end{tabularx}
 \end{table}

@@ -41,7 +41,7 @@ jobs:
     strategy:
       matrix:
         tex_file:
-          - { name: "datasheet/datasheet", output: "datasheet/1-inch-Photodetector_datasheet", description: "Device datasheet (pdf)" }
+          - { dir: "datasheet", name: "datasheet", output: "1-inch-Photodetector_datasheet", description: "Device datasheet (pdf)" }
     steps:
       - name: Download repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -49,9 +49,10 @@ jobs:
           persist-credentials: false
 
       - name: Build PDF
-        uses: Quantum-Electronic-Devices/texlive-build@83a2e45b54a7797677c07b3b79e70e914a2bb40f # v1.0.0
+        uses: Quantum-Electronic-Devices/texlive-build@e80fc1b964ed3e69e21917525078a8ee06ca40df # v1.3.0
         id: pdf-filename
         with:
+          directory: ${{ matrix.tex_file.dir }}
           tex-filename: ${{ matrix.tex_file.name }}
           output-filename: ${{ matrix.tex_file.output }}
 
@@ -61,7 +62,6 @@ jobs:
           PDF_PATH: ${{ steps.pdf-filename.outputs.value }}
           PDF_OUTPUT: ${{ matrix.tex_file.output }}
           PDF_DESCRIPTION: ${{ matrix.tex_file.description }}
-          TEX_FILENAME: ${{ matrix.tex_file.name }}
         shell: bash
         run: |
           set -euo pipefail
@@ -80,7 +80,7 @@ jobs:
           mkdir -p "$stage_dir"
           cp -- "${PDF_PATH}.pdf" "$stage_dir/${PDF_OUTPUT}.pdf"
           # Store metadata alongside the PDF for the publishing job.
-          printf '%s\n%s\n' "${PDF_OUTPUT}.pdf" "$PDF_DESCRIPTION" > "$stage_dir/${TEX_FILENAME}.metadata"
+          printf '%s\n%s\n' "${PDF_OUTPUT}.pdf" "$PDF_DESCRIPTION" > "$stage_dir/${PDF_OUTPUT}.metadata"
           printf 'value=%s\n' "$value" >> "$GITHUB_OUTPUT"
 
       # With `archive: false` the artifact is named after the FILE (e.g. AVB.pdf) and
@@ -100,7 +100,7 @@ jobs:
         if: github.event_name == 'release' && github.event.action == 'published'
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: release-pdf-${{ matrix.tex_file.name }}
+          name: release-pdf-${{ matrix.tex_file.output }}
           path: ${{ runner.temp }}/release-pdf/*
           if-no-files-found: error
           retention-days: 1

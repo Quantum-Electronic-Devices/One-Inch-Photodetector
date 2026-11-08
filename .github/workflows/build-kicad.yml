@@ -108,6 +108,7 @@ jobs:
   ERC:
     name: Run ERC
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: read
     needs: tests
@@ -138,6 +139,7 @@ jobs:
   DRC:
     name: Run DRC
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     needs: tests
     permissions:
       contents: read
@@ -168,6 +170,7 @@ jobs:
   fabrication_output:
     name: 'Produce fabrication outputs'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     needs: [ERC, DRC]
     permissions:
       contents: read
@@ -217,6 +220,7 @@ jobs:
   release:
     name: 'Upload manufacturing files to release'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     needs: [tests, fabrication_output]
     permissions:
       contents: write
@@ -233,8 +237,6 @@ jobs:
       REVISION: ${{ needs.tests.outputs.revision }}
       VARIANT: ${{ matrix.variant }}
     steps:
-      # Exact artifact names (no glob), so a variant can never pick up another
-      # variant's files. All three extract into the same directory.
       - name: Download BOM artifact
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:

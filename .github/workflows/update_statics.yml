@@ -8,6 +8,12 @@ permissions: {}
 
 jobs:
   update-static-files:
+    # One run per static source at a time. Not cancelled mid-flight: the job
+    # pushes a branch and opens/updates a PR, and aborting that halfway could
+    # leave a partial state. A newer run just waits (only one is kept pending).
+    concurrency:
+      group: ${{ github.workflow }}-${{ matrix.static.repo }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -30,6 +36,6 @@ jobs:
           repository: ${{ matrix.static.repo }}
           version_file: ${{ matrix.static.version_file }}
           remote-token: ${{ secrets.QED_LOGO_PA }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.QED_BOT_PAT }}
           commit-user-name: qed-bot
           commit-user-id: 279461323

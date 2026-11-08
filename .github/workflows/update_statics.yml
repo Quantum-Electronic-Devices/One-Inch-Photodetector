@@ -1,6 +1,11 @@
 name: Update statics
 on:
   workflow_dispatch:
+    inputs:
+      force-new-pr:
+        description: "Close the existing pull request for the same release (if any) and open a new one under the current bot account"
+        type: boolean
+        default: false
   schedule:
     - cron: "0 0 * * *"
 
@@ -8,12 +13,6 @@ permissions: {}
 
 jobs:
   update-static-files:
-    # One run per static source at a time. Not cancelled mid-flight: the job
-    # pushes a branch and opens/updates a PR, and aborting that halfway could
-    # leave a partial state. A newer run just waits (only one is kept pending).
-    concurrency:
-      group: ${{ github.workflow }}-${{ matrix.static.repo }}
-      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -39,3 +38,4 @@ jobs:
           github-token: ${{ secrets.QED_BOT_PAT }}
           commit-user-name: qed-bot
           commit-user-id: 279461323
+          force-new-pr: ${{ inputs.force-new-pr }}

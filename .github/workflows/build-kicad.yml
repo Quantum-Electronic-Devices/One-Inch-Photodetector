@@ -16,9 +16,12 @@ on:
         required: true
         type: string
       variants:
-        required: true
+        # JSON array of variant names. A default is only used when the input is
+        # not required, so this is optional instead of "required: true".
+        required: false
         type: string
-        default: "[ 'default', ]"
+        default: '["default"]'
+
 permissions: {}
 
 defaults:

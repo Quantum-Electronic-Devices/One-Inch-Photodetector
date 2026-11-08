@@ -1,7 +1,7 @@
 name: "Build manufacturing files"
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Runs on pushes to any branch that touch KiCad/KiBot files, and when a release
+# is published.
 on:
   push:
     branches:
@@ -20,6 +20,12 @@ on:
     types:
       - published
 
+# A newer push to the same branch supersedes an older run still in progress.
+# Release runs are never cancelled: they upload the assets to the release.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name != 'release' }}
+
 jobs:
   create_manufacturing_files:
     permissions:
@@ -31,7 +37,7 @@ jobs:
             schematic: 1inch-photodetector.kicad_sch
             pcb: 1inch-photodetector.kicad_pcb
             config: config.kibot.yaml
-            variants: "[ 'default', ]"
+            variants: '["default"]'
     uses: ./.github/workflows/build-kicad.yml
     with:
       schematic: ${{ matrix.project.schematic }}
